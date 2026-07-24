@@ -2,16 +2,14 @@
 
 **專利元件符號輸入工具** 是一款基於 [AutoHotkey v2](https://www.autohotkey.com/) 開發的輔助輸入工具，旨在提升專利說明書撰寫與審查過程中輸入「元件名稱」與「元件符號編號」的效率。
 
+![專利元件符號輸入工具介面](interface.png)
+
 ---
 
 ## 🌟 主要功能特點
 
 1. **熱字串（Hotstring）快速替換**
    - 輸入 `元件編號/`（例如 `100/`），即可自動替換並輸出對應的 `元件名稱 + 編號`（例如 `Hobot擦窗機100`）。
-
----
-
-## 🌟 其他功能   
 2. **前置視窗自動追蹤與輸入**
    - 使用 Windows API (`SetWinEventHook`) 自動紀錄上一個作用中的視窗（如 Word、文字編輯器等）。
    - 在本工具列表中點選元件時，會自動切換回上一個視窗並插入選取的元件符號。
@@ -39,9 +37,8 @@
 
 ```text
 ComponentsIME/
-├── ComponentsIMEv02.ahk     # AHK v2 主程式腳本
+├── interface.png             # 軟體介面截圖
 ├── components.txt            # 元件配對資料庫 (格式：編號：元件名稱)
-├── ComponentsIME-ad.html     # 下載與展示之廣告頁面
 ├── ComponentsIMEv02.ico      # 程式圖示
 ├── README.md                 # 專利元件符號輸入工具說明文件
 └── backup/                   # components.txt 自動備份資料夾
@@ -75,6 +72,6 @@ ComponentsIME/
 ## 🚀 使用方法
 
 1. 安裝 [AutoHotkey v2](https://www.autohotkey.com/)。
-2. 雙擊執行 `ComponentsIMEv02.ahk`。
+2. 雙擊執行 `ComponentsIMEv02.ahk`（或編譯後之 `.exe`）。
 3. 程式啟動後會置於螢幕右側，並監聽鍵盤輸入。
 4. 在任何編輯器中輸入 `編號/` 即可進行快速插入。
